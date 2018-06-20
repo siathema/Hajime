@@ -64,7 +64,7 @@ inline void Assert(bool x, const char* reason)
 
 // CAUTION(matthias): DO NOT USE WITH ARRAYS OF UNKNOWN SIZE.
 // DOCUMENTATION(matthias): Move data from one memory pointer to another of size.
-void* Memory_Move(void* destination, const void* source, Index size)
+inline void* Memory_Move(void* destination, const void* source, Index size)
 {
     u8* to = (u8*)destination;
     u8* from = (u8*)source;
@@ -78,7 +78,7 @@ void* Memory_Move(void* destination, const void* source, Index size)
 
 // CAUTION(matthias): DO NOT USE WITH ARRAYS OF UNKNOWN SIZE.
 // DOCUMENTATION(matthias): Set memory to value for size.
-void Memory_Set(void* source, u8 value, Index size)
+inline void Memory_Set(void* source, u8 value, Index size)
 {
     u8* result = (u8*)source;
     for(Index i=0; i<size; i++)
