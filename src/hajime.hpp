@@ -32,6 +32,11 @@ typedef size_t Index;
 
 typedef u8 b8;
 
+typedef u16 ID;
+typedef u16 UI_ID;
+
+#define Internal static
+
 // NOTE(matthias): stolen from https://github.com/gpakosz/Assert
 #if defined(_WIN32)
 #  define debug_break() __debugbreak()
